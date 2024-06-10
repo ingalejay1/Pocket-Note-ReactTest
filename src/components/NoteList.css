@@ -1,0 +1,134 @@
+/* NoteList.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #F7ECDC;
+}
+
+.left-main {
+  width: 35vw;
+  background-color: #f7f7f7;
+  /* overflow-y: auto; */
+}
+
+.left-main h2 {
+  margin: 20px;
+  font-size: 32px;
+}
+
+.left-main button {
+  width: 25vw;
+  color: white;
+  background-color: black;
+  font-size: 25px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 60px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.left-main nav {
+  margin-top: 20px;
+}
+
+.left-main nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+.list-contain {
+  overflow-y: auto;
+  max-height: 75vh;
+}
+
+.list-contain::-webkit-scrollbar{
+  display: none;
+}
+
+.left-main nav ul li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 32px 0 0 32px;
+  font-size: 20px;
+  padding: 15px 25px;
+  margin-left: 50px;
+}
+
+.list-style.active {
+  background-color: #F7ECDC;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.right-main {
+  flex: 1;
+  width: 65vw;
+  overflow-y: auto;
+}
+
+.right-background-data-main {
+  text-align: center;
+}
+
+.notes {
+  max-height: 52vh;
+  overflow-y: auto;
+}
+
+.notes::-webkit-scrollbar{
+  display: none;
+}
+
+.note {
+  padding: 30px 0;
+}
+
+.note-time {
+  font-size: 0.8em;
+  color: black;
+}
+
+#generalInfo {
+  margin-top: 15%;
+}
+
+#welcomeImg {
+  width:500px
+}
+
+#generalInfo h1 {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.end-to-end {
+  position: fixed;
+  bottom: 0;
+  right: 25%;
+  margin-bottom: 15px;
+}
+
+.end-to-end img {
+  width: 13px;
+  margin-right: 5px;
+}
+
+

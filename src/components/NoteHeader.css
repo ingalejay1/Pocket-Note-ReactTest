@@ -1,0 +1,33 @@
+/* NoteHeader.css */
+
+
+.right-background-data {
+    display: flex;
+    align-items: center;
+    background-color: #E8E8E8; 
+    padding: 20px;
+  }
+  
+  /* Hide scrollbar for NoteHeader */
+  .right-background-data::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .right-background-data {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+  
+  .circle {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white; 
+    background-color: #ccc; 
+    margin-right: 10px; 
+  }
+  

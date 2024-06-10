@@ -1,0 +1,79 @@
+/* NoteListForm.css */
+
+.newListcontainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .form-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-content .noteName {
+    margin-bottom: 15px;
+  }
+
+  .form-content h3 {
+    padding-bottom: 10px; 
+  }
+  
+  .form-content label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-content input[type="text"] {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .form-content .color-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .form-content button {
+    display: inline-block;
+    padding: 5px 20px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 75%;
+  }
+  
+  .form-content button:hover {
+    background: rgb(43, 37, 37);
+  }
+
+  .noteName {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+  .noteName label {
+    font-weight: 500;
+    padding-left: 10px;
+  }

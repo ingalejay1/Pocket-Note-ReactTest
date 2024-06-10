@@ -1,0 +1,31 @@
+/* CreateNote.css */
+
+.create-note {
+    position: fixed;
+   bottom: 0;
+   width: 65vw;
+   height: 30vh;
+   background-color: #E8E8E8;
+   padding: 20px;
+   /* margin-bottom: 32px; */
+  }
+  
+  .create-note textarea {
+    width: 100%;
+    height: 25vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    
+  }
+  
+  .send-icon {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+  
