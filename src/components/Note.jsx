@@ -3,7 +3,7 @@ import NoteListForm from './NoteListForm';
 import NoteHeader from './NoteHeader';
 import NoteItem from './NoteItem';
 import CreateNote from './CreateNote';
-import './NoteList.css';
+import './Note.css';
 import backgroundImg from '../images/frontBackground.png';
 import lock from '../images/lock.png';
 
@@ -97,7 +97,7 @@ function NoteList() {
           <>
             <NoteHeader noteList={activeNoteList} />
             <div className="notes">
-              {activeNoteList.notes.map((note) => (
+              {activeNoteList && activeNoteList.notes.slice().reverse().map((note) => (
                 <NoteItem key={note.id} note={note} />
               ))}
               <CreateNote onSave={handleSaveNote} />

@@ -1,5 +1,5 @@
 import './App.css'
-import NoteList from './components/NoteList'
+import NoteList from './components/Note'
 
 function App() {
   return (

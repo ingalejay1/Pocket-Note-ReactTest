@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './CreateNoteListForm.css';
+import './CreateNoteListForm.css';
 
 const predefinedColors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A5', '#33FFF3', '#F3FF33'];
 
