@@ -143,6 +143,27 @@
 }
 
 
+@media  screen and (max-width: 720px) {
+  .right-main {
+    display: block;
+  }
+  
+  .left-main{
+    width: 100vw;
+  }
 
+  .left-main button {
+    width: 80vw;
+  }
+
+  .end-to-end {
+    display: none;
+  }
+
+  .list-style.active {
+    background-color: rgb(255, 236, 239);
+  }
+  
+}
 
 
