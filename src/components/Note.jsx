@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NoteListForm from './NoteListForm';
-import NoteHeader from './NoteHeader';
+import NoteListForm from './PopUp';
+import NoteHeader from './Header';
 import NoteItem from './NoteItem';
 import CreateNote from './CreateNote';
 import './Note.css';
@@ -8,17 +8,26 @@ import backgroundImg from '../images/frontBackground.png';
 import lock from '../images/lock.png';
 
 function NoteList() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <760);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [noteLists, setNoteLists] = useState([]);
   const [activeNoteList, setActiveNoteList] = useState(null);
 
-  // Load note lists from local storage on component mount
+  // Mobile view
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 760);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Local Storage
   useEffect(() => {
     const storedNoteLists = JSON.parse(localStorage.getItem('noteLists')) || [];
     setNoteLists(storedNoteLists);
   }, []);
 
-  // Save note lists to local storage whenever they change
   useEffect(() => {
     localStorage.setItem('noteLists', JSON.stringify(noteLists));
   }, [noteLists]);
@@ -58,6 +67,11 @@ function NoteList() {
     setActiveNoteList(updatedActiveNoteList);
   };
 
+  const handleGoBack = () => {
+    setActiveNoteList(null);
+  }
+
+  // Initials
   const getInitials = (name) => {
     const nameParts = name.trim().split(' ');
     if (nameParts.length >= 2) {
@@ -70,7 +84,8 @@ function NoteList() {
 
   return (
     <div className="container">
-      <header className="left-main">
+      {!isMobile || !activeNoteList ? (
+        <header className="left-main">
         <div className='fix-data'>
           <h2>Pocket Notes</h2>
           <button onClick={handleCreateNotesGroup}>+ Create Notes Group</button>
@@ -92,10 +107,12 @@ function NoteList() {
           </nav>
         </div>
       </header>
+      ) : null}
+      
       <div className="right-main">
         {activeNoteList ? (
           <>
-            <NoteHeader noteList={activeNoteList} />
+            <NoteHeader noteList={activeNoteList} isMobile={isMobile} onGoBack={handleGoBack} />
             <div className="notes">
               {activeNoteList && activeNoteList.notes.slice().reverse().map((note) => (
                 <NoteItem key={note.id} note={note} />
@@ -112,7 +129,10 @@ function NoteList() {
                 Send and receive messages without keeping your phone online.<br />
                 Use Pocket Notes on up to 4 linked devices and 1 mobile phone.
               </p>
-              <p className="end-to-end"><img src={lock} alt="lock" />end-to-end encrypted</p>
+              <p className="end-to-end">
+                <img src={lock} alt="lock" />
+                end-to-end encrypted
+              </p>
             </div>
           </div>
         )}

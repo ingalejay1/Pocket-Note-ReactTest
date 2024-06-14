@@ -1,5 +1,3 @@
-/* NoteHeader.css */
-
 
 .right-background-data {
     display: flex;
@@ -8,7 +6,6 @@
     padding: 20px;
   }
   
-  /* Hide scrollbar for NoteHeader */
   .right-background-data::-webkit-scrollbar {
     display: none; 
   }
@@ -30,4 +27,20 @@
     background-color: #ccc; 
     margin-right: 10px; 
   }
+
+  .back-button {
+    cursor: pointer;
+    border: none;
+    padding-right: 10px;
+    background: none;
+    transition: transform 0.3s ease;
+  }
   
+  .back-button:hover {
+    transform: scale(1.3);
+  }
+
+  .back-button img {
+    height: 20px;
+    width: 30px;
+  }

@@ -29,11 +29,13 @@
   margin-left: 8%;
   margin-top: 10%;
   margin-bottom: 10px;
-  transition: all 0.2sec;
+  transition: transform 0.3s ease;
+
 }
 
 .left-main button:hover {
-  transform: translate3d(0px, -2px, 0px);
+  transform: scale(1.1);
+  
 } 
 
 .left-main nav {
@@ -143,10 +145,7 @@
 }
 
 
-@media  screen and (max-width: 720px) {
-  .right-main {
-    display: block;
-  }
+@media  screen and (max-width: 760px) {
   
   .left-main{
     width: 100vw;
@@ -162,6 +161,16 @@
 
   .list-style.active {
     background-color: rgb(255, 236, 239);
+  }
+
+  .right-main {
+    width: 100vw;
+  }
+
+  .list-contain {
+    overflow-y: auto;
+    max-height: 70vh;
+  
   }
   
 }

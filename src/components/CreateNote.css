@@ -28,5 +28,16 @@
     cursor: pointer;
     width: 35px;
     height: 35px;
+    transition: transform 0.3s ease;
+  }
+
+  .send-icon:hover {
+    transform: scale(1.1);
+  }
+
+  @media  screen and  (max-width: 760px) {
+    .create-note {
+      width: 100vw;
+    }
   }
   

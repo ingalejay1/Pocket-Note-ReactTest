@@ -1,7 +1,8 @@
 import React from 'react';
-import './NoteHeader.css';
+import './Header.css';
+import arrow from '../images/arrow.png';
 
-const NoteHeader = ({ noteList }) => {
+const NoteHeader = ({ noteList, isMobile, onGoBack }) => {
   const getInitials = (name) => {
     const nameParts = name.trim().split(' ');
     if (nameParts.length >= 2) {
@@ -14,6 +15,9 @@ const NoteHeader = ({ noteList }) => {
 
   return (
     <div className="right-background-data">
+      {isMobile && (
+        <button className='back-button' onClick={onGoBack}><img src={arrow} alt="back-Btn" /></button>
+      )}
       <div className="circle" style={{ backgroundColor: noteList.color || '#ccc' }}>
         <span>{getInitials(noteList.name)}</span>
       </div>

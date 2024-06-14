@@ -2,15 +2,29 @@
     display: flex;
     justify-content: space-around;
     font-size: 18px;
-
 }
 
 .note-content {
     width: 47vw;
-    padding-right: 20px;
-    
+    padding-right: 20px;    
 }
 
 .note-time {
 font-weight: 500;
+}
+
+@media  screen and (max-width: 760px) {
+    .note-content{
+        width: 70vw;
+    }
+    .note-time {
+        width: 20vw;
+    }
+
+    .note {
+        display: flex;
+        justify-content: space-around;
+        font-size: 16px;
+        margin-left: 5%;   
+    }
 }

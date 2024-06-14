@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './NoteListForm.css';
+import './PopUp.css';
 
 function NoteListForm({ onCreate, onClose }) {
   const [newNoteListName, setNewNoteListName] = useState('');
