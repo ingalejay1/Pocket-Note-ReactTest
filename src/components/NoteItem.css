@@ -15,10 +15,7 @@ font-weight: 500;
 
 @media  screen and (max-width: 760px) {
     .note-content{
-        width: 70vw;
-    }
-    .note-time {
-        width: 20vw;
+        width: 60vw;
     }
 
     .note {
